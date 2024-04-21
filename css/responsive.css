@@ -1,18 +1,115 @@
 /* Extra large devices (1200px and down) */
 
-@media screen and (max-width: 1200px) {}
-
+@media screen and (max-width: 1200px) {
+}
 
 /* Large devices (992px and down) */
 
-@media screen and (max-width: 992px) {}
-
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+  .nav ul {
+    gap: 50px;
+  }
+  .visit-box,
+.form-box {
+  padding: 20px;
+}
+}
 
 /* Medium devices (768px and down) */
 
-@media screen and (max-width: 768px) {}
-
+@media screen and (max-width: 768px) {
+  .nav ul {
+    width: 100%;
+    justify-content: space-between;
+    padding: auto 25px;
+  }
+  .nav ul li img {
+    width: 190px;
+    margin-right: auto;
+  }
+  .lb-img,
+  .lb-text {
+    padding: 20px;
+  }
+  .lb-p {
+    margin: 40px 0px;
+  }
+  .villa .v-head .col-md-6 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .visit-us > .container-xxl > .row > .col-md-6:nth-child(1) {
+    border-right:none;
+    border-bottom: 1px solid var(--th-color-3);
+    padding: 60px 0px;
+  }
+  .visit-us > .container-xxl > .row > .col-md-6:nth-child(2) {
+    border-left:none;
+    border-top: 1px solid var(--th-color-3);
+    padding: 80px 0px;
+  }
+  .visit-box,
+.form-box {
+  max-width: 85%;
+  margin: auto;
+}
+.foot-icon{
+    gap: 10px;
+    justify-content: center;
+}
+/* .foot-icon .fab{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--th-color-4);
+    border: 1px solid var(--th-color-4);
+    border-radius: 50%;
+    font-size: 20px;
+} */
+.foot-bottom p{
+    text-align: center;
+}
+}
 
 /* Small devices (576px and down) */
 
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 38px;
+      }
+      h2 {
+        font-size: 28px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      h6 {
+        font-size: 18px;
+      }
+  .lb-img,
+  .lb-text {
+    padding: 15px;
+  }
+  .lb-p {
+    margin: 30px 0px;
+  }
+  .visit-box,
+  .form-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+}

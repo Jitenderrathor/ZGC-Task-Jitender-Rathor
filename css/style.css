@@ -94,6 +94,52 @@ p {
   right: 0;
   padding: 20px 10px;
   border-bottom: 1px solid var(--th-color-1);
+  transition: all .5s;
+}
+#header .fas{
+    font-size: 30px;
+    color: var(--th-color-1);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .5s;
+}
+#header .fas:hover{
+    border: 1px solid var(--th-color-1);
+    background-color: var(--th-color-1);
+    color: var(--th-color-4);
+}
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(100%);
+    background-color: var(--th-color-4);
+    transition: all .5s;
+}
+.mobile-nav.active{
+    transform: translateX(0%);
+}
+.mobile-nav .nav{
+  padding: 20px 10px;
+  border-bottom: 1px solid var(--th-color-1);
+}
+.mobile-nav menu{
+    height: 100vh;
+    text-align: center;
+    margin-top: 50px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.mobile-nav menu a{
+    font-size: 36px;
+    color: var(--th-color-1);
+    font-family: var(--th-font-fam);
+    margin: 30px;
 }
 .nav ul {
   list-style: none;

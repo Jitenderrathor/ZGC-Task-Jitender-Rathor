@@ -28,12 +28,29 @@
     <header id="header">
         <div class="nav">
             <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Sectors</a></li>
+                <li class="d-none d-md-block"><a href="#">About us</a></li>
+                <li class="d-none d-md-block"><a href="#">Sectors</a></li>
                 <li><a href="#"> <img src="image/logo.png" alt=""></a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li class="d-none d-md-block"><a href="#">Gallery</a></li>
+                <li class="d-none d-md-block"><a href="#">Contact us</a></li>
+                <li class="d-block d-md-none"><a><i class="fas fa-bars"></i></a></li>
             </ul>
+        </div>
+        <div class="mobile-nav">
+            <div class="nav">
+                <ul>
+                    <li><a href="#"> <img src="image/logo.png" alt=""></a></li>
+                    <li><a><i class="fas fa-times"></i></a></li>
+                </ul>
+            </div>
+            <menu>
+                <ul class="m-0 p-0 list-unstyled">
+                    <li class=""><a href="#">About us</a></li>
+                    <li class=""><a href="#">Sectors</a></li>
+                    <li class=""><a href="#">Gallery</a></li>
+                    <li class=""><a href="#">Contact us</a></li>
+                </ul>
+            </menu>
         </div>
     </header>
     <!-- Header Section End -->
@@ -134,16 +151,16 @@
                                 <h6>get in touch or</h6>
                                 <h1>visit US</h1>
                             </div>
-                            <div class="row justify-content-between mt-5">
-                                <div class="col-md-4">
+                            <div class="row justify-content-between mt-3 mt-sm-5">
+                                <div class="col-sm-4 mb-4">
                                     <p>CALL AT</p>
                                     <a href="tel:7069817800">7069817800</a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-sm-6 mb-4">
                                     <p>EMAIL AT</p>
                                     <a href="mailto:perfection@galainfra.com">perfection@galainfra.com </a>
                                 </div>
-                                <div class="col-md-12 mt-5 mb-4">
+                                <div class="col-md-12 mt-md-5 mb-4">
                                     <p>SITE ADDRESS</p>
                                     <a href="# ">Le Parque, Sanand Bavla Road, (near Reliance Gas Bottling /
                                         PuniskaHealth Care), Pipan – 382110
@@ -166,9 +183,9 @@
                             </div>
                             <form action="submit_form.php" method="post" class="mt-5">
                                 <div class="row">
-                                    <div class="col-sm-6 mb-3"><input type="text" name="first-name"
+                                    <div class="col-lg-6 mb-3"><input type="text" name="first-name"
                                             placeholder="FIRST NAME"></div>
-                                    <div class="col-sm-6 mb-3"><input type="text" name="last-name"
+                                    <div class="col-lg-6 mb-3"><input type="text" name="last-name"
                                             placeholder="LAST NAME"></div>
                                     <div class="col-sm-12 mb-3"><input type="email" name="email" placeholder="EMAIL">
                                     </div>
@@ -206,14 +223,14 @@
         <div class="foot-top">
             <div class="container-xxl">
                 <div class="row justify-content-between">
-                    <div class="col-md-4">
+                    <div class="col-sm-4">
                         <div class="foot-text">
                             <img src="image/logo-light.png" alt="">
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
                     </div>
-                    <div class="col-md-5">
-                        <div class="foot-text d-flex justify-content-between">
+                    <div class="col-sm-8 col-md-6 col-lg-5 mt-4">
+                        <div class="foot-text d-flex flex-column flex-sm-row justify-content-evenly justify-content-md-between">
                             <div class="">
                                 <ul>
                                     <li><a href="#">Home</a></li>
@@ -242,7 +259,7 @@
         <div class="foot-bottom">
             <div class="container-xxl">
                 <div class="row align-items-center">
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-4 m-ms-0">
                         <div class="foot-icon">
                             <div class=""><i class="fab fa-facebook-f"></i></div>
                             <div class=""><i class="fab fa-instagram"></i></div>
@@ -276,6 +293,20 @@
 
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
+    <script>
+        $(window).scroll(function(){
+            let st = $(window).scrollTop();
+            if(st>0){
+                $("#header").css("background", "#fff");
+            }
+            else{
+                $("#header").css("background", "transparent");
+            }
+        })
+        $(".nav .fas").click(function(){
+            $(".mobile-nav").toggleClass("active");
+        })
+    </script>
 </body>
 
 </html>
